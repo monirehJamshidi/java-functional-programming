@@ -44,9 +44,12 @@ Lambda expressions provide a concise way to represent a function.
 
 Example:
 
+```java
 List<String> names = List.of("Ali", "Sara", "John");
 
 names.forEach(name -> System.out.println(name));
+
+```
 
 The same operation can also be written using a method reference:
 
