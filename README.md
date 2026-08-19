@@ -56,7 +56,6 @@ See:
 
 lambda/LambdaExample.java
 
----
 
 ## 🔹 Functional Interfaces
 
@@ -81,7 +80,6 @@ functionalinterface/Calculator.java
 
 functionalinterface/FunctionalInterfaceExample.java
 
----
 
 ## 🔹 Predicate<T>
 
@@ -143,7 +141,6 @@ See:
 
 consumer/ConsumerExample.java
 
----
 
 ## 🔹 Supplier<T>
 
@@ -160,7 +157,6 @@ See:
 
 supplier/SupplierExample.java
 
----
 
 ## 🔹 Stream API
 
@@ -195,7 +191,7 @@ stream/Employee.java
 
 stream/StreamExample.java
 
----
+
 ## 🔹 filter() and map()
 
 A simple example combining filter() and map():
@@ -223,7 +219,7 @@ See:
 
 filter_map/Example.java
 
----
+
 ## 🔹 reduce()
 reduce() combines the elements of a Stream into a single result.
 
@@ -246,7 +242,7 @@ See:
 
 reduce/ReduceExample.java
 
----
+
 
 ## 🔹 Optional
 
@@ -266,7 +262,6 @@ optional/OptionalExample.java
 
 optional/User.java
 
----
 
 ## 🧩 Java Functional Interfaces
 
