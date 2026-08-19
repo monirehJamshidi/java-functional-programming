@@ -52,9 +52,9 @@ names.forEach(name -> System.out.println(name));
 ```
 
 The same operation can also be written using a method reference:
-
+```java
 names.forEach(System.out::println);
-
+```
 See:
 
 lambda/LambdaExample.java
@@ -66,17 +66,24 @@ A functional interface contains exactly one abstract method and can be used as t
 
 Example:
 
+```java
+
 @FunctionalInterface
 public interface Calculator {
 int calculate(int a, int b);
 }
+```
 
 Using the interface with a lambda:
+
+```java
+
 
 Calculator addition = (a, b) -> a + b;
 
 int result = addition.calculate(5, 3);
 
+```
 See:
 
 functionalinterface/Calculator.java
@@ -89,17 +96,21 @@ functionalinterface/FunctionalInterfaceExample.java
 Predicate<T> represents a function that takes an input and returns a boolean value.
 
 Example:
+```java
+
 
 Predicate<Integer> isAdult = age -> age >= 18;
 
 System.out.println(isAdult.test(25));
-
+```
 It can also be used directly with the Stream API:
+```java
+
 
 List<Integer> adults = ages.stream()
 .filter(isAdult)
 .toList();
-
+```
 See:
 
 predicate/PredicateExample.java
