@@ -279,6 +279,12 @@ optional/User.java
 
 ## 🧩 Java Functional Interfaces
 
+| Java API        | Purpose                           |
+| --------------- | --------------------------------- |
+| `Predicate<T>`  | Takes input → returns boolean     |
+| `Function<T,R>` | Takes input → returns output      |
+| `Consumer<T>`   | Takes input → returns nothing     |
+| `Supplier<T>`   | Takes no input → supplies a value |
 
 
 These interfaces are part of the java.util.function package and are commonly used together with lambda expressions and the Stream API.
