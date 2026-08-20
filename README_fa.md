@@ -254,7 +254,7 @@ if (user != null) {
 }
 ```
 
-می‌توانیم داشته باشیم:
+می‌توانیم داشته باشیم:ifPresent() یک Consumer می‌گیرد.
 
 ```java
 Optional.ofNullable(user)
@@ -264,3 +264,116 @@ Optional.ofNullable(user)
 
 البته در پروژه واقعی نباید همه‌جا از Optional استفاده کنیم.
 
+
+###نکته مهم برای مصاحبه ⭐
+
+ifPresent() یک Consumer می‌گیرد.
+
+امضای ساده‌شده‌اش:
+```java
+void ifPresent(Consumer<? super T> action)
+```
+
+پس این:
+
+```java
+.ifPresent(System.out::println);
+```
+
+در واقع یک Consumer به ifPresent() داده است.
+
+بنابراین ارتباطی که تا الان یاد گرفتیم خیلی قشنگ به هم وصل می‌شود:
+
+```java
+Predicate  → filter()
+Function   → map()
+Consumer   → ifPresent()
+```
+
+و این دقیقاً یکی از چیزهایی است که باعث می‌شود Functional Programming در Java را بهتر بفهمی.
+
+
+### 11. Pure Function
+
+یکی از مفاهیم اصلی Functional Programming است.
+
+#### یک Pure Function:
+
+1. برای ورودی یکسان همیشه خروجی یکسان دارد
+2. Side Effect ندارد.
+
+مثلاً:
+
+```java
+int add(int a, int b) {
+    return a + b;
+}
+```
+
+این pure است.
+
+اما:
+
+```java
+int total = 0;
+
+int add(int number) {
+    total += number;
+    return total;
+}
+```
+pure نیست، چون state بیرونی را تغییر می‌دهد.
+
+### 12. Immutability
+
+در Functional Programming تلاش می‌کنیم داده‌ها را تغییر ندهیم.
+
+مثلاً به جای تغییر یک object موجود، object جدید ایجاد کنیم.
+
+Java امکاناتی مثل:
+```java
+record User(String name, int age) {}
+```
+
+### 🎯 چیزی که برای مصاحبه Senior Java باید بلد باشی
+
+What is Functional Programming in Java?
+
+Functional programming is a programming style where we use functions to process data. In Java, it was introduced mainly with Java 8. Lambda expressions, functional interfaces, Stream API and Optional are important parts of this style. It helps us write more readable and declarative code.
+
+یعنی:
+
+برنامه‌نویسی تابعی سبکی از برنامه‌نویسی است که در آن از توابع برای پردازش داده استفاده می‌کنیم. در Java این سبک عمدتاً با Java 8 معرفی شد. Lambda، Functional Interface، Stream API و Optional از بخش‌های مهم آن هستند. این سبک کمک می‌کند کد خواناتر و به شکل declarative نوشته شود.
+
+
+
+What is a Predicate in Java?
+
+A Predicate is a functional interface that takes an input and returns a boolean value. It is commonly used for filtering data.
+
+
+### یک نکته مصاحبه‌ای مهم ⭐
+
+در این مثال:
+
+```java
+employees.stream()
+        .filter(...)
+        .map(...)
+        .toList();
+```
+
+این‌ها Intermediate Operation هستند:
+
+```java
+.filter(...)
+.map(...)
+```
+
+اما:
+اینها یک Terminal Operation است.
+```java
+.toList()
+```
+
+یعنی Stream تا زمانی که به یک Terminal Operation نرسد، عملیات را واقعاً اجرا نمی‌کند.
