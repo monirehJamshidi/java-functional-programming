@@ -1,6 +1,6 @@
 ##  مفاهیم مهم Functional Programming در Java
 
-برای مصاحبه بهتر است این موارد را بلد باشی:
+برای مصاحبه بهتره آدم این موارد را بلد باشه :
 
 ### 1. Lambda Expression
 
@@ -133,7 +133,7 @@ System.out.println(randomNumber.get());
 
 ### 7. Stream API ⭐
 
-این قسمت برای تو به‌عنوان Java Developer خیلی مهم است.
+این قسمت برای کسی به‌عنوان Java Developer خیلی مهم است.
 
 مثلاً:
 
@@ -176,7 +176,7 @@ filter → map → sorted → toList
 
 ### 8. map و filter
 
-این دو را حتماً برای مصاحبه خوب یاد بگیر.
+این دو را حتماً برای مصاحبه خوب یاد گرفت.
 
 #### filter
 
